@@ -7,6 +7,6 @@ if (defined? Compass)
 end
 
 module SingularityQuickSpanner
-  VERSION = "0.1.1"
+  VERSION = "0.1.2"
   DATE = "2014-06-24"
 end

@@ -16,3 +16,12 @@ Initial release.
 **2014.06.24**
 
 Fixed gemspec.
+
+
+
+0.1.2
+-----
+
+**2014.06.24**
+
+Fixed Breakpoint Slicer discovery.

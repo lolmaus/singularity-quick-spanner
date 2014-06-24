@@ -163,7 +163,7 @@ $sqs-buffer: () !default !global
 
 =rwd-thumb-span($start-cols: 1, $start-slice: 1, $guts: 0.1, $gutstyle: find-gutter-style(), $pseudoclass: $sqs-thumb-span-pseudoclass, $center-last-row: $sqs-thumb-span-center-last-row, $bottom-margins: $sqs-thumb-span-bottom-margins, $cancel-last-row-margins: $sqs-thumb-span-cancel-last-row-margins, $overhead-min: $sqs-thumb-span-overhead-min, $overhead-max: $sqs-thumb-span-overhead-max)
 
-  @if not function-exists(at)
+  @if not mixin-exists(at)
     @warn "Singularity Quick Spanner's `rwd-thumb-span` mixin requires Breakpoint Slicer: https://github.com/lolmaus/breakpoint-slicer"
 
   @for $i from 1 through (total-slices() - $start-slice + 1)
