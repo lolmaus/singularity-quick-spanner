@@ -52,7 +52,17 @@
 <p>Same as above.</p>
 
 <h3>Sass</h3>
-<pre>$sqs-thumb-span-center-last-row: true !global
+
+<p>It can be as simple as:</p>
+
+<pre>.thumbnail
+  +rwd-thumb-span</pre>
+
+We'll customize it a little for better looks:
+
+<pre>// Global options
+$slicer-breakpoints: 0 200px 400px 600px 800px 1000px 1200px 1400px 1600px 1800px 2000px !global
+$sqs-thumb-span-center-last-row: true !global
 $sqs-thumb-span-cancel-last-row-margins: true !global
 
 .thumbnail
@@ -73,9 +83,7 @@ $sqs-thumb-span-cancel-last-row-margins: true !global
   <div class=thumbnail></div>
 </div>
 
-<p>The size of thumbnails is determined by the size of Breakpoint Slicer's slices. For thumbnails to maintain constant apparent size, slices have to be regular. Here are the slices used in this example:</p>
-
-<pre>$slicer-breakpoints: 0 200px 400px 600px 800px 1000px 1200px 1400px 1600px 1800px 2000px</pre>
+<p>The size of thumbnails is determined by the size of Breakpoint Slicer's slices. For thumbnails to maintain constant apparent size, slices have to be regular.</p>
 
 <p>Mind that the last row centering and last row margin cancelling features may produce excessive amounts of CSS.</p>
 
