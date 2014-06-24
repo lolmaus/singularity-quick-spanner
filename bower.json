@@ -1,0 +1,24 @@
+{
+  "name": "singularity-quick-spanner",
+  "version": "0.1.0",
+  "main": "stylesheets/_singularity-quick-spanner.scss",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "Gemfile",
+    "Gemfile.lock",
+    "*.gemspec",
+    "lib",
+    "example",
+    "tests",
+    "Rakefile",
+    "templates",
+    "working",
+    "CONTRIBUTING.md"
+  ],
+  "dependencies": {
+    "singularity": ">=1.2.1",
+    "breakpoint-sass": ">=2.4.2"
+  }
+} 
