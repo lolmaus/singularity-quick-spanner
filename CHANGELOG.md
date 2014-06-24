@@ -7,3 +7,12 @@ Singularity Quick Spanner changelog
 **2014.06.24**
 
 Initial release.
+
+
+
+0.1.1
+-----
+
+**2014.06.24**
+
+Fixed gemspec.
