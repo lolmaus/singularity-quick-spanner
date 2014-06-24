@@ -1,0 +1,48 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import breakpoint
+@import singularitygs
+@import toolkit
+@import ../../singularity-quick-spanner/stylesheets/singularity-quick-spanner
+
+
+@import breakpoint-slicer
+$slicer-breakpoints: 0 200px 400px 600px 800px 1000px 1200px 1400px 1600px 1800px 2000px
+
+h1
+  font-size: 2.5em
+
+h2
+  margin-top: 2em
+  font-size: 2em
+  border-bottom: 2px solid black
+
+
+.example-1, .example-2
+  +clearfix
+  
+.thumbnail
+
+  background-color: deepskyblue
+  &:nth-child(3n+2)
+    background-color: deeppink
+  &:nth-child(3n+3)
+    background-color: palegreen
+  
+  // Intrinsic ratio
+  &:before
+    display: block
+    content: ''
+    padding-top: 60%
+  
+  // Examples
+  .example-1 &
+    +thumb-span(5, 0.1)
+    
+  .example-2 &
+    $sqs-thumb-span-center-last-row: true !global
+    $sqs-thumb-span-cancel-last-row-margins: true !global
+    +rwd-thumb-span($overhead-min: 1, $overhead-max: 20)

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Singularity Quick Spanner demo page</title>
+  <link rel=stylesheet href=css/screen.css>
+</head>
+<body>
+
+<h1>Singularity Quick Spanner demo</h1>
+
+<h2>Thumbnail grid</h2>
+
+<p>A thumbnail grid is a symmetric grid of equal-sized elements. The number of elements may vary, but is enough to fill at least several rows of the grid.</p>
+<p>With Singularity Quick Spanner, you can efforlessly set up a thumbnail grid:</p>
+
+<h3>HTML</h3>
+<pre>&lt;div class=thumbnail>&lt;/div>
+&lt;div class=thumbnail>&lt;/div>
+....
+&lt;div class=thumbnail>&lt;/div>
+&lt;div class=thumbnail>&lt;/div></pre>
+
+<h3>Sass</h3>
+<pre>.thumbnail
+  +thumb-grid(5, 0.1)</pre>
+  
+<h3>Result</h3>
+<div class="example-1">
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+</div>
+
+<p>Did you notice that horizontal and vertical gutters are equal?</p>
+
+<h2>Responsive thumbnail grid</h2>
+
+<p>You can make a responsive thumbnail grid with a snap of fingers!</p>
+
+<h3>HTML</h3>
+<p>Same as above.</p>
+
+<h3>Sass</h3>
+<pre>$sqs-thumb-span-center-last-row: true !global
+$sqs-thumb-span-cancel-last-row-margins: true !global
+
+.thumbnail
+  +rwd-thumb-span($overhead-min: 11, $overhead-max: 11)</pre>
+  
+<h3>Result</h3>
+<div class="example-2">
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+  <div class=thumbnail></div>
+</div>
+
+<p>The size of thumbnails is determined by the size of Breakpoint Slicer's slices. For thumbnails to maintain constant apparent size, slices have to be regular. Here are the slices used in this example:</p>
+
+<pre>$slicer-breakpoints: 0 200px 400px 600px 800px 1000px 1200px 1400px 1600px 1800px 2000px</pre>
+
+<p>Mind that the last row centering and last row margin cancelling features may produce excessive amounts of CSS.</p>
+
+</body>
+</html> 
