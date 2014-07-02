@@ -86,6 +86,10 @@ $sqs-buffer: () !default !global
 
     // Apply the span
     +float-span(1)
+    
+    &:nth-#{$pseudoclass}(#{$cols}n+1)
+      clear: both
+    
     &:nth-#{$pseudoclass}(#{$cols}n+#{$cols})
       +float-span(1, 'last')
 

@@ -25,3 +25,12 @@ Fixed gemspec.
 **2014.06.24**
 
 Fixed Breakpoint Slicer discovery.
+
+
+
+0.1.3
+-----
+
+**2014.07.03**
+
+Clearing the first item in each row. Allows for thumbnails with varying height.
