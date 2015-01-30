@@ -108,7 +108,7 @@ Singularity Quick Spanner lets you effortlessly set up a thumbnail grid of given
 
 ```sass
 .thumbnail
-  +thumb-grid(5, 0.1)
+  +thumb-span(5, 0.1)
 ```
 
 Should be applied to a class corresponding to each thumbnail (grid cell).
@@ -182,7 +182,7 @@ With Singularity Breakpoint Slicer you can do it with a snap of fingers:
 
 ```sass
 .thumbnail
-  +rwd-thumb-grid
+  +rwd-thumb-span
 ```
 
 This mixin leverages Breakpoint Slicer to create a responsive thumbnail grid. Within every slice (media query), it will apply a thumb-span, increasing the number of columns for every subsequent slice.
@@ -197,7 +197,7 @@ Arguments:
 
   Allowed values: A positive unitless integer. Default: 1.
   
-It can accepts all arguments available for `thumb-grid` (except `$cols`, which is calculated dynmamically). Don't forget to define `$guts`!
+It can accepts all arguments available for `thumb-span` (except `$cols`, which is calculated dynmamically). Don't forget to define `$guts`!
                     
 
 
